@@ -1,1 +1,0 @@
-bind -f common d shell screen -d -t cmus
