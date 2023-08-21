@@ -5,7 +5,7 @@ alias grep="grep --color"
 alias ll="ls -avlh"
 alias l="ls -1Ahv"
 alias Gn="poweroff"
-alias zathura="zathura"
+alias z="zathura"
 alias p="sudo pacman"
 alias a="sudo apt"
 alias vim='$EDITOR'
@@ -26,6 +26,7 @@ alias oc="/usr/bin/octave -q"
 alias bcam='light -S $(photoR)'
 alias smi='sudo make install'
 alias t='todo.sh'
+alias mpv='setsid -f mpv --really-quiet --no-terminal'
 alias config='git --git-dir=$HOME/.local/dotfiles/ --work-tree=$HOME'
 
 # Network Manager
@@ -93,7 +94,7 @@ ccd(){
 }
 
 function ] {
-        ans="$(octave --eval "$*")"
+        ans="$(py -c "from math import *; print($*)")"
         ans="${ans#ans = }"
         echo "$ans"; export ans
 }

@@ -105,7 +105,7 @@ export FILE="lf"
 export MUSIC_PLAYER="cmus"
 
 #firefox
-export MOZ_X11_EGL=1
+export MOZ_ENABLE_WAYLAND=1
 #export MOZ_DISABLE_RDD_SANDBOX=1
 #
 

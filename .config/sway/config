@@ -3,7 +3,9 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-exec autotiling
+exec autotiling -l 2
+exec dunst
+set $menu_open tofi --prompt-text "open:" --horizontal false --height 400
 
 ### Variables
 #
@@ -19,7 +21,7 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu  fuzzel
+set $menu  tofi-run | xargs swaymsg exec --
 #dmenu_path | dmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
@@ -224,14 +226,14 @@ bindsym $mod+Left exec light -U 5
 #bindsym $mod+Left
 #bindsym $mod+Right
 
-default_border none
-default_floating_border none
+default_border pixel 5
+default_floating_border pixel 5
 font pango:monospace 0
 titlebar_padding 1
 titlebar_border_thickness 0
 
-gaps outer 10
+gaps outer 5
 gaps inner 10
 
 bindsym $mod+w exec firefox-esr
-
+bindsym $mod+n split horizontal; layout tabbed

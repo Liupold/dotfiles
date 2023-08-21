@@ -7,7 +7,7 @@
 ## https://gitlab.com/uoou/ytp
 ## GPL v. 2
 
-read -r api_key < /media/Video/youtube-api.key
+read -r api_key < /media/hdd_media/Video/youtube-api.key
 # These API keys have limits. If the script inexplicably fails
 # create your own here: https://console.developers.google.com/
 # following these instructions: https://www.slickremix.com/docs/get-api-key-for-youtube/
