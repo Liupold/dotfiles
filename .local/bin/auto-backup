@@ -1,0 +1,14 @@
+#!/bin/sh
+rdiff-backup backup --print-statistics /media/ssd_work/Academic/ rpi4::/media/usb-hdd/Backups/Academic
+rdiff-backup --force backup --print-statistics /media/hdd_media/Backup-Recovery/ rpi4::/media/usb-hdd/Backups/Backup-Recovery
+rdiff-backup backup --print-statistics /media/hdd_media/Documents/ rpi4::/media/usb-hdd/Backups/Documents
+rdiff-backup backup --print-statistics /media/hdd_media/cal-lib/ rpi4::/media/usb-hdd/Backups/cal-lib
+rdiff-backup backup --print-statistics /media/hdd_media/Pictures/ rpi4::/media/usb-hdd/Backups/Pictures
+rdiff-backup backup --print-statistics /media/hdd_media/Video/ rpi4::/media/usb-hdd/Backups/Video
+
+rdiff-backup remove increments --older-than 1M rpi4::/media/usb-hdd/Backups/Academic
+rdiff-backup remove increments --older-than 1M rpi4::/media/usb-hdd/Backups/Backup-Recovery
+rdiff-backup remove increments --older-than 1M rpi4::/media/usb-hdd/Backups/Documents
+rdiff-backup remove increments --older-than 1M rpi4::/media/usb-hdd/Backups/cal-lib
+rdiff-backup remove increments --older-than 1M rpi4::/media/usb-hdd/Backups/Pictures
+rdiff-backup remove increments --older-than 1M rpi4::/media/usb-hdd/Backups/Video

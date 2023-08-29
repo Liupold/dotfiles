@@ -112,6 +112,9 @@ export MOZ_ENABLE_WAYLAND=1
 # vulkan
 export RADV_PERFTEST=video_decode
 
+# bemoji
+export BEMOJI_PICKER_CMD="tofi -c ''"
+
 # Luna Settings
 export LUNA_WALL_DIR="$XDG_DATA_HOME/WALLS"
 export PIDSWALLOW_TERMINAL=" qutebrowser st urxvt "

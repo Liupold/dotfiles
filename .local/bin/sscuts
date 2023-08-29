@@ -11,7 +11,7 @@ MACRO_D="$HOME/Downloads"
 
 MACRO_s="/media/ssd_work"
 MACRO_b="$MACRO_s/Books"
-MACRO_A="$MACRO_s/Assignment"
+MACRO_A="$MACRO_s/Academic"
 MACRO_L="$MACRO_s/CSIR-NET/Fiziks-Lec/"
 
 MACRO_m="/media/hdd_media"

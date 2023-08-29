@@ -30,6 +30,8 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output "*" bg ~/.config/luna_theme/WALL.jpg fill
+output HDMI-A-1 mode 1920x1080@100Hz pos 0,0 adaptive_sync on
+output eDP-1 mode 1920x1080@60Hz pos 1920,0
 #
 # Example configuration:
 #
@@ -186,29 +188,32 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
-
 bar {
-     swaybar_command waybar
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    font "Terminus (TTF)"
+    # status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command "~/.config/sway/status-bar.sh"
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
 }
+
+#bar {
+#     swaybar_command waybar
+#}
 
 include /etc/sway/config.d/*
 
@@ -235,5 +240,20 @@ titlebar_border_thickness 0
 gaps outer 5
 gaps inner 10
 
-bindsym $mod+w exec firefox-esr
-bindsym $mod+n split horizontal; layout tabbed
+bindsym $mod+w exec firefox
+bindsym $mod+n layout tabbed
+bindsym $mod+Shift+n layout split
+
+for_window [app_id="gnuplot_qt"] floating enable
+
+workspace 1 output HDMI-A-1
+workspace 2 output HDMI-A-1
+workspace 3 output HDMI-A-1
+workspace 4 output HDMI-A-1
+workspace 5 output HDMI-A-1
+
+workspace 6 output eDP-1
+workspace 7 output eDP-1
+workspace 8 output eDP-1
+workspace 9 output eDP-1
+workspace 0 output eDP-1
