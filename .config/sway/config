@@ -5,7 +5,16 @@
 
 exec autotiling -l 2
 exec dunst
+exec ~/.local/bin/headphone_trigger
+
 set $menu_open tofi --prompt-text "open:" --horizontal false --height 400
+set $locker 'swaylock -f -e -c 1d2021 --inside-color 000000b3 -s fill -i ~/.config/luna_theme/lock-screen-wall'
+exec swayidle -w \
+    timeout 300 $locker \
+    timeout 300 'swaymsg "output * dpms off"' \
+    timeout 15 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep $locker
 
 ### Variables
 #
@@ -25,6 +34,7 @@ set $menu  tofi-run | xargs swaymsg exec --
 #dmenu_path | dmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
+include ~/.config/luna_theme/colors-sway
 
 ### Output configuration
 #
@@ -32,6 +42,7 @@ include /etc/sway/config-vars.d/*
 output "*" bg ~/.config/luna_theme/WALL.jpg fill
 output HDMI-A-1 mode 1920x1080@100Hz pos 0,0 adaptive_sync on
 output eDP-1 mode 1920x1080@60Hz pos 1920,0
+output eDP-1 scale 1.3
 #
 # Example configuration:
 #
@@ -243,8 +254,11 @@ gaps inner 10
 bindsym $mod+w exec firefox
 bindsym $mod+n layout tabbed
 bindsym $mod+Shift+n layout split
+bindsym $mod+i exec $locker
 
 for_window [app_id="gnuplot_qt"] floating enable
+for_window [app_id="firefox"] inhibit_idle fullscreen
+for_window [app_id="forg.pwmt.zathura"] inhibit_idle focus
 
 workspace 1 output HDMI-A-1
 workspace 2 output HDMI-A-1
