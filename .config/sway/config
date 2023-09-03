@@ -237,8 +237,11 @@ input type:keyboard {
 # sound and volume
 bindsym $mod+Up exec pamixer -i 5
 bindsym $mod+Down exec pamixer -d 5
+
 bindsym $mod+Right exec light -A 5
 bindsym $mod+Left exec light -U 5
+bindsym $mod+Shift+Right exec ddcutil --bus 5 setvcp 10 + 5
+bindsym $mod+Shift+Left exec ddcutil --bus 5 setvcp 10 - 5
 #bindsym $mod+Left
 #bindsym $mod+Right
 
@@ -251,6 +254,7 @@ titlebar_border_thickness 0
 gaps outer 5
 gaps inner 10
 
+bindsym $mod+o exec ~/.local/bin/open-books
 bindsym $mod+w exec firefox
 bindsym $mod+n layout tabbed
 bindsym $mod+Shift+n layout split

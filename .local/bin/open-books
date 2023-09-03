@@ -1,0 +1,8 @@
+#!/bin/sh
+
+folder="/media/ssd_work/Academic/Books"
+menu_cmd="tofi"
+pdf_reader="zathura"
+
+selection="$(ls -1 "$folder" | $menu_cmd)"
+[ -n "$selection" ] && "$pdf_reader"  "$folder/$selection"
