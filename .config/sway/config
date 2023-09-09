@@ -5,6 +5,7 @@
 
 exec autotiling -l 2
 exec dunst
+exec mpris-proxy
 exec ~/.local/bin/headphone_trigger
 
 set $menu_open tofi --prompt-text "open:" --horizontal false --height 400
@@ -259,6 +260,8 @@ bindsym $mod+w exec firefox
 bindsym $mod+n layout tabbed
 bindsym $mod+Shift+n layout split
 bindsym $mod+i exec $locker
+bindsym $mod+Print exec grimshot copy area
+bindsym $mod+F12 exec grimshot copy area
 
 for_window [app_id="gnuplot_qt"] floating enable
 for_window [app_id="firefox"] inhibit_idle fullscreen
