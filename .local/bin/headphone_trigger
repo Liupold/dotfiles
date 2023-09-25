@@ -13,8 +13,9 @@ is_headphones_pluged() {
 }
 
 on_plug() {
-  resp=$(dunstify -A 'resume,default' "Resume $(playerctl -l) ?")
-  [ resp = "resume" ] && playerctl play
+#  resp=$(dunstify -A 'resume,default' "Resume $(playerctl -l) ?")
+#  [ resp = "resume" ] && playerctl play
+  return 0
 }
 
 on_remove() {
