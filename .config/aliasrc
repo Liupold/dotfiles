@@ -26,7 +26,7 @@ alias oc="/usr/bin/octave -q"
 alias bcam='light -S $(photoR)'
 alias smi='sudo make install'
 alias t='todo.sh'
-alias mpv='setsid -f mpv --really-quiet --no-terminal'
+alias mpv="setsid -f mpv --really-quiet --no-terminal ytdl-format=bestvideo[height<=?$LUNA_YPLAY_RES]+bestaudio"
 alias config='git --git-dir=$HOME/.local/dotfiles/ --work-tree=$HOME'
 
 # Network Manager
