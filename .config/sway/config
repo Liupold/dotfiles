@@ -44,6 +44,7 @@ include ~/.config/luna_theme/colors-sway
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output "*" bg ~/.config/luna_theme/WALL.jpg fill
 output HDMI-A-1 mode 1920x1080@100Hz pos 0,0 adaptive_sync on
+output HDMI-A-2 mode 1920x1080@100Hz pos 0,0 adaptive_sync on
 output eDP-1 pos 1920,0
 output eDP-1 scale 1
 
@@ -306,3 +307,9 @@ workspace 2 output HDMI-A-1
 workspace 3 output HDMI-A-1
 workspace 4 output HDMI-A-1
 workspace 5 output HDMI-A-1
+
+workspace 1 output HDMI-A-2
+workspace 2 output HDMI-A-2
+workspace 3 output HDMI-A-2
+workspace 4 output HDMI-A-2
+workspace 5 output HDMI-A-2
