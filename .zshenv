@@ -99,7 +99,7 @@ export PYDORO_CONFIG_FILE="$XDG_CONFIG_HOME/pydoro.ini"
 #Progs
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="chromium"
 export READER="zathura --fork"
 export FILE="lf"
 export MUSIC_PLAYER="cmus"
@@ -116,14 +116,5 @@ export RADV_PERFTEST=video_decode
 export BEMOJI_PICKER_CMD="tofi -c ''"
 
 # Luna Settings
-export LUNA_WALL_DIR="$XDG_DATA_HOME/WALLS"
-export PIDSWALLOW_TERMINAL=" qutebrowser st urxvt "
-mkdir -p "$LUNA_WALL_DIR"
-export LUNA_USE_PYWAL=1
-export LUNA_COLOR_PATH="$XDG_CONFIG_HOME/luna_theme"
-export LUNA_WALL_PATH="$XDG_CONFIG_HOME/luna_theme/WALL.jpg"
-export LUNA_YPLAY_RES="1080"
-export LUNA_YPLAY_SCALE="0.6"
-export LUNA_AUTO_PAUSE=1
-export LUNA_MUSIC_DIR="$HOME/Music"
-export LUNA_DOWNLOAD_DIR="$HOME/Downloads"
+export LUNA_CONF_PATH="$XDG_CONFIG_HOME/luna_theme/lunaconf.sh"
+. "$LUNA_CONF_PATH"

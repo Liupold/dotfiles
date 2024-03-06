@@ -1,6 +1,6 @@
 #!/bin/sh
 
-folder="/media/ssd_work/Academic/Books"
+folder="$LUNA_BOOK_DIR"
 menu_cmd="tofi"
 pdf_reader="zathura"
 

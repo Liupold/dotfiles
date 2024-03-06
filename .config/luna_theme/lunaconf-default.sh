@@ -9,5 +9,5 @@ export LUNA_YPLAY_RES="768"
 export LUNA_YPLAY_SCALE="0.6"
 export LUNA_AUTO_PAUSE=1
 export LUNA_MUSIC_DIR="$HOME/Music"
-export LUNA_BOOK_DIR="$HOME/Music"
+export LUNA_BOOK_DIR="$HOME/Academic/Books"
 export LUNA_DOWNLOAD_DIR="$HOME/Downloads"

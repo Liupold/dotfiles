@@ -66,7 +66,13 @@ Plug 'rhysd/vim-grammarous'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'RaafatTurki/hex.nvim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'sirver/ultisnips'
+Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
 call plug#end()
+
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<c-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:mkdp_browser = $BROWSER
 
 " ----------------------------------------------------------

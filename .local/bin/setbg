@@ -20,5 +20,7 @@ fi
 #swaymsg output "*" bg "$LUNA_WALL_PATH" fill
 sway reload
 notify-send "Theme Updated!"
+which convert && convert "$LUNA_WALL_PATH" -set colorspace Gray \
+  -separate -average $LUNA_COLOR_PATH/lock-screen-wall
 
 # [ "$TERM" = "xterm-kitty" ] && kitty @ set-colors ~/.cache/wal/colors-kitty.conf
