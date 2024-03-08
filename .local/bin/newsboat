@@ -6,4 +6,19 @@
 #
 # tmux detach -s nbx 2>/dev/null
 # tmux attach -t nbx >/dev/null 2>&1
+PID_OF_NEWSBOAT=$(pidof /usr/bin/newsboat)
+[ -n "$PID_OF_NEWSBOAT" ]  && {
+  TERMINAL_PID="$(pstree -ATtlsp $PID_OF_NEWSBOAT)"
+  TERMINAL_PID_tmp="${TERMINAL_PID#*-$TERMINAL(}"
+  [ $TERMINAL_PID_tmp = $TERMINAL_PID ] && {
+    echo "Can't focus newsboat. Not a $TERMINAL's child."
+    printf "Kill newsboat? (y/N)"; read resp
+    [ $resp = "y" ] && killall /usr/bin/newsboat
+    /usr/bin/newsboat
+    exit
+  }
+  TERMINAL_PID="${TERMINAL_PID_tmp%%)*}"
+  swaymsg "[pid=$TERMINAL_PID]" focus
+  exit
+}
 /usr/bin/newsboat

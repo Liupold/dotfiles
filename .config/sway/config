@@ -259,6 +259,9 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+bindsym $mod+bracketleft exec playerctl previous
+bindsym $mod+bracketright exec playerctl next
+
 bindsym $mod+Right exec light -A 2
 bindsym XF86MonBrightnessUp exec light -A 2
 bindsym $mod+Left exec light -U 2
@@ -288,11 +291,11 @@ bindsym $mod+F12 exec grimshot copy area
 
 for_window [app_id="gnuplot_qt"] floating enable
 for_window [app_id="firefox"] inhibit_idle fullscreen
-for_window [app_id="forg.pwmt.zathura"] inhibit_idle focus
-for_window [app_id="pavucontrol"] floating enable
 for_window [class="Chromium"] inhibit_idle fullscreen
+for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="forg.pwmt.zathura"] inhibit_idle visible
 for_window [class="zoom" title="^zoom$"] border none, floating enable
+for_window [app_id="python3"] border none, floating enable
 for_window [class="zoom"] border pixel, floating enable, inhibit_idle visible
 for_window [class="FreeTube"] inhibit_idle visible
 

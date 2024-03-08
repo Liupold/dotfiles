@@ -1,0 +1,4 @@
+#!/bin/sh
+INTERFACE="$(find /sys/class/net -name "enx*")"
+INTERFACE=${INTERFACE##*/}
+sudo ip link set up "$INTERFACE" && sudo dhclient "$INTERFACE"

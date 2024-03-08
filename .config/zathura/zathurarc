@@ -16,8 +16,8 @@ set font "Fira Code 14"
 #set recolor
 #set recolor-lightcolor \#EDD1B0
 #set recolor-darkcolor \#000000
-set recolor-lightcolor \#192348
-set recolor-darkcolor \#dac9cb
+#set recolor-lightcolor \#192348
+#set recolor-darkcolor \#dac9cb
 set recolor-keephue
 set default-bg \#333333
 set window-title-home-tilde
