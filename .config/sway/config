@@ -282,7 +282,7 @@ gaps outer 2
 gaps inner 4
 
 bindsym $mod+o exec ~/.local/bin/open-books
-bindsym $mod+w exec chromium
+bindsym $mod+w exec $BROWSER
 bindsym $mod+n layout tabbed
 bindsym $mod+Shift+n layout split
 bindsym $mod+i exec $locker

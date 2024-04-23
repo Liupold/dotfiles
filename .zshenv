@@ -33,9 +33,10 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 #go
 export GOPATH="$XDG_DATA_HOME/go"
 
-# gtk2
+# gtk
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 mkdir -p "$XDG_CONFIG_HOME/gtk-2.0"
+export GTK_THEME=adw-gtk3-dark
 
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
@@ -99,7 +100,7 @@ export PYDORO_CONFIG_FILE="$XDG_CONFIG_HOME/pydoro.ini"
 #Progs
 export EDITOR="nvim"
 export TERMINAL="foot"
-export BROWSER="chromium"
+export BROWSER="firefox-esr"
 export READER="zathura --fork"
 export FILE="lf"
 export MUSIC_PLAYER="cmus"
