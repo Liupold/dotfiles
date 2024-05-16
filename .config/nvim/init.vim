@@ -152,7 +152,7 @@ autocmd BufReadPre,BufNewFile *.r nnoremap <leader>c :sp<CR>:resize 10<CR>:term 
 autocmd BufReadPre,BufNewFile *.jl nnoremap <leader>c :sp<CR>:resize 10<CR>:term time julia "%" <CR>
 " ----------------------------------------------------------
 "  Fortan90
-autocmd BufReadPre,BufNewFile *.f90 nnoremap <leader>c :sp<CR>:resize 10<CR>:term gfortran "%" -o "%.out" -lm && time ./"%.out" && rm ./"%.out"<CR>
+autocmd BufReadPre,BufNewFile *.f90 nnoremap <leader>c :sp<CR>:resize 10<CR>:term gfortran "%" -o "%.out" -lm -lfftw3 && time ./"%.out" && rm ./"%.out"<CR>
 " ----------------------------------------------------------
 "  Fortan90
 autocmd BufReadPre,BufNewFile config.h nnoremap <leader>c :sp<CR>:resize 10<CR>:term cd "%:p:h" && sudo make install <CR>

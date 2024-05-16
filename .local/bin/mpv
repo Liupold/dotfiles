@@ -1,2 +1,2 @@
 #!/bin/sh
-setsid -f /usr/bin/mpv --ytdl-format="bestvideo[height<=$LUNA_YPLAY_RES]+bestaudio" $@
+setsid -f /usr/bin/mpv --ytdl-format="bestvideo[height<=$LUNA_YPLAY_RES]+bestaudio" "$@"
