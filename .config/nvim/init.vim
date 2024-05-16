@@ -48,13 +48,13 @@ autocmd TermOpen * setlocal nonumber norelativenumber
 
 " ----------------------------------------------------------
 " PLUGINs
-if empty(glob('$XDG_CONFIG_HOME/nvim/autoload/plug.vim'))
+if empty(glob("$XDG_CONFIG_HOME/nvim/autoload/plug.vim"))
         silent !curl -fLo "$XDG_CONFIG_HOME/nvim/autoload/plug.vim" --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
             autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('$XDG_DATA_HOME/nvim/plugged')
+call plug#begin("$XDG_DATA_HOME/nvim/plugged")
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'VebbNix/lf-vim'
 "Plug 'dense-analysis/ale'
@@ -67,6 +67,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'RaafatTurki/hex.nvim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'sirver/ultisnips'
+Plug 'cristoomey/vim-tmux-navigator'
 Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
 call plug#end()
 
@@ -102,10 +103,10 @@ endif
 
 " ----------------------------------------------------------
 " Shortcutting split navigation, saving a keypress:
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-l> <C-w>l
-	map <C-k> <C-w>k
+"	map <C-h> <C-w>h
+"	map <C-j> <C-w>j
+"	map <C-l> <C-w>l
+"	map <C-k> <C-w>k
 
 " ----------------------------------------------------------
 " Copy And Paste

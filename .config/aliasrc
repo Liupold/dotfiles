@@ -2,8 +2,8 @@
 # shellcheck disable=SC2139
 alias ls="ls --group-directories-first --color=auto -v"
 alias grep="grep --color"
-alias ll="ls -avlh"
-alias l="ls -1Ahv"
+alias ll="ls -vlh"
+alias l="ls -1hv"
 alias Gn="poweroff"
 alias z="zathura --fork"
 alias p="sudo pacman"
