@@ -3,7 +3,7 @@ autoload -Uz run-help-git
 
 if [ "$UID" -eq 0 ]; then NCOLOR="red"; else NCOLOR="white"; fi
 PROMPT="%B%{$fg[$NCOLOR]%}%n@%m:%{$fg[blue]%}%c/%{$reset_color%}%b$ "
-RPROMPT='%F{blue}[%f%*%F{blue}]%f'
+#RPROMPT='%F{blue}[%f%*%F{blue}]%f'
 
 # History in cache directory:
 HISTSIZE=10000
@@ -49,11 +49,6 @@ source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlight
 
 # search history
 # source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-[ "$TERM" = 'alacritty' ] && cat $XDG_CONFIG_HOME/luna_theme/sequences && clear
-[ "$TERM" = 'foot' ] && cat $XDG_CONFIG_HOME/luna_theme/sequences && clear
-[ "$TERM" = 'xterm-256color' ] && cat $XDG_CONFIG_HOME/luna_theme/sequences && clear
-[ -n "$DISPLAY" ]  && command -v xdo >/dev/null 2>&1 && xdo id > /tmp/term-wid-"$$" && \
-        trap "( rm -f /tmp/term-wid-"$$" )" EXIT HUP
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search

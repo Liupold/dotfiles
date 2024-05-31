@@ -8,7 +8,6 @@ alias Gn="poweroff"
 alias z="zathura --fork"
 alias p="sudo pacman"
 alias a="sudo apt"
-alias vim='$EDITOR'
 alias d='doas'
 alias gp='gnuplot'
 alias s='sudo'
@@ -18,7 +17,6 @@ alias sv='sudoedit'
 alias py='python3 -q'
 alias pyy='py -i $XDG_CONFIG_HOME/python/mypyenv.py'
 alias nb='newsboat'
-alias pypad='vim /tmp/pypad.py'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias o='xdg-open'
 alias octave="octave -f"
@@ -26,15 +24,9 @@ alias oc="/usr/bin/octave -q"
 alias bcam='light -S $(photoR)'
 alias smi='sudo make install'
 alias t='todo.sh'
-alias config='git --git-dir=$HOME/.local/dotfiles/ --work-tree=$HOME'
+alias ip='ip -c=auto'
+alias config='git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
-# Network Manager
-alias wifi='nmcli d wifi'
-alias lw='nmcli d wifi list'
-alias rad='nmcli r'
-
-# startx
-alias sX="startx -c $HOME/.config/X11/xinitrc"
 
 # youtube-dl
 alias ytdlv="yt-dlp --cookies-from-browser $BROWSER -N 10 --add-metadata -f 'bestvideo[height<=$LUNA_YPLAY_RES]+bestaudio' -o '%(title)s.%(ext)s'"

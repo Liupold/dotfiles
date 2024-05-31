@@ -1,8 +1,7 @@
 #!/bin/sh
 
 folder="$LUNA_BOOK_DIR"
-menu_cmd="tofi --heigh=30% --prompt-text=Open: --horizontal=false --result-spacing=2 --anchor=bottom --history=true --history-file=$HOME/.cache/books-opened"
 pdf_reader="zathura"
+selection="$(find Documents/Books -type f | wofi --show dmenu)"
 
-selection="$(ls -1 "$folder" | $menu_cmd)"
-[ -n "$selection" ] && "$pdf_reader"  "$folder/$selection"
+[ -n "$selection" ] && "$pdf_reader"  "$selection"

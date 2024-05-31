@@ -7,25 +7,13 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 export USER_BINPATH="$HOME/.local/bin/"
 
-
 # zsh
-mkdir -p "$XDG_CACHE_HOME/zsh"
+#mkdir -p "$XDG_CACHE_HOME/zsh"
 export ZDOTDIR="$HOME/.config/zsh"
 export HISTFILE="$XDG_CACHE_HOME/zsh/history"
 
-#vim
-mkdir -p "$XDG_DATA_HOME/nvim/undo" "$XDG_DATA_HOME/nvim/swap" "$XDG_DATA_HOME/nvim/backup"
-export VIMINIT="source $XDG_CONFIG_HOME/nvim/init.vim"
-
-# adb
-export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
-export ADB_VENDOR_KEY="$XDG_CONFIG_HOME/android"
-
 # cargo (rust)
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-
-# elinks
-export ELINKS_CONFDIR="$XDG_CONFIG_HOME/elinks"
 
 # gnupg
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
@@ -35,7 +23,7 @@ export GOPATH="$XDG_DATA_HOME/go"
 
 # gtk
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
-mkdir -p "$XDG_CONFIG_HOME/gtk-2.0"
+#mkdir -p "$XDG_CONFIG_HOME/gtk-2.0"
 export GTK_THEME=adw-gtk3-dark
 
 # gradle
@@ -70,37 +58,25 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export LESSHISTFILE="-"
 
 # newsboat
-mkdir -p "$XDG_DATA_HOME/newsboat" "$XDG_CONFIG_HOME/newsboat"
-
-# Xauthority
-export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
-
-# Xorg
-export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+#mkdir -p "$XDG_DATA_HOME/newsboat" "$XDG_CONFIG_HOME/newsboat"
 
 # python
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pystartup.py"
 
-# git
-mkdir -p "$XDG_CONFIG_HOME/git/"
-touch "$XDG_CONFIG_HOME/git/config"
-touch "$XDG_CONFIG_HOME/git/credentials"
-
 # octave
 export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
-mkdir -p "$XDG_DATA_HOME/octave"
+#mkdir -p "$XDG_DATA_HOME/octave"
 
 
 export PATH="$USER_BINPATH:$GOPATH/bin/:$PATH:$CARGO_HOME/bin/:/usr/sbin/"
-
 export FMDPY_CONFIG_FILE="$XDG_CONFIG_HOME/fmdpy.ini"
 export PYDORO_CONFIG_FILE="$XDG_CONFIG_HOME/pydoro.ini"
 
 #Progs
 export EDITOR="nvim"
 export TERMINAL="foot"
-export BROWSER="firefox-esr"
+export BROWSER="brave-browser"
 export READER="zathura --fork"
 export FILE="lf"
 export MUSIC_PLAYER="cmus"
@@ -111,7 +87,7 @@ export MOZ_ENABLE_WAYLAND=1
 #
 
 # vulkan
-export RADV_PERFTEST=video_decode
+#export RADV_PERFTEST=video_decode
 
 # bemoji
 export BEMOJI_PICKER_CMD="tofi -c ''"
