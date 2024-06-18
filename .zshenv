@@ -74,9 +74,9 @@ export FMDPY_CONFIG_FILE="$XDG_CONFIG_HOME/fmdpy.ini"
 export PYDORO_CONFIG_FILE="$XDG_CONFIG_HOME/pydoro.ini"
 
 #Progs
-export EDITOR="nvim"
+export EDITOR="$(which nvim)"
 export TERMINAL="foot"
-export BROWSER="brave-browser"
+export BROWSER="firefox"
 export READER="zathura --fork"
 export FILE="lf"
 export MUSIC_PLAYER="cmus"
