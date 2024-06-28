@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/rohnch/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["code_runner.nvim"] = {
+    loaded = true,
+    path = "/home/rohnch/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
+    url = "https://github.com/CRAG666/code_runner.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/rohnch/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

@@ -27,10 +27,10 @@ return require('packer').startup(function(use)
 
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
-
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use 'CRAG666/code_runner.nvim'
   --use 'romgrk/barbar.nvim'
 end)
