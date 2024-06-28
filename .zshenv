@@ -84,7 +84,13 @@ export MUSIC_PLAYER="cmus"
 #firefox
 export MOZ_ENABLE_WAYLAND=1
 #export MOZ_DISABLE_RDD_SANDBOX=1
-#
+
+#cuda
+# Cuda
+export PATH=/usr/local/cuda-12.4/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export C_INCLUDE_PATH=/usr/local/cuda-12.4/include${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
+
 
 # vulkan
 #export RADV_PERFTEST=video_decode

@@ -2,6 +2,6 @@
 
 folder="$LUNA_BOOK_DIR"
 pdf_reader="zathura"
-selection="$(find Documents/Books -type f | wofi --show dmenu)"
+selection="$(find Documents/Books -type f | rofi -dmenu)"
 
 [ -n "$selection" ] && "$pdf_reader"  "$selection"
