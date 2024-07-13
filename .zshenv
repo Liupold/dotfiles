@@ -87,9 +87,11 @@ export MOZ_ENABLE_WAYLAND=1
 
 #cuda
 # Cuda
-export PATH=/usr/local/cuda-12.4/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export C_INCLUDE_PATH=/usr/local/cuda-12.4/include${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-12.5/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export C_INCLUDE_PATH=/usr/local/cuda-12.5/include${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export C_INCLUDE_PATH=/usr/local/lib64${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
 
 
 # vulkan

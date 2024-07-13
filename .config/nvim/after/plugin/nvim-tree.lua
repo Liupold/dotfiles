@@ -6,20 +6,16 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
 require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
+  update_cwd = true,
+  hijack_cursor = true,
+  git = {
+    ignore = false,
   },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
+  actions = {
+    open_file = {
+      resize_window = true,
+    },
   },
 })
+
