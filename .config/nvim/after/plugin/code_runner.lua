@@ -5,12 +5,21 @@ require('code_runner').setup({
       "javac $fileName &&",
       "java $fileNameWithoutExt"
     },
-    python = "python3 -u",
+    python = {
+        "cd $dir &&",
+        "python3 -u $fileName",
+    },
     typescript = "deno run",
     rust = {
       "cd $dir &&",
       "rustc $fileName &&",
       "$dir/$fileNameWithoutExt"
     },
+    gnuplot = "gnuplot",
+    tex = {
+      "cd $dir &&",
+      "rubber --inplace --ps $fileName &&",
+    },
+    matlab = "octave -q",
   }
 })

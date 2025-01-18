@@ -87,15 +87,18 @@ export MOZ_ENABLE_WAYLAND=1
 
 #cuda
 # Cuda
-export PATH=/usr/local/cuda-12.5/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export C_INCLUDE_PATH=/usr/local/cuda-12.5/include${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export C_INCLUDE_PATH=/usr/local/cuda-12.6/include${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
 export LD_LIBRARY_PATH=/usr/local/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export C_INCLUDE_PATH=/usr/local/lib64${C_INCLUDE_PATH:+:${LD_LIBRARY_PATH}}
 
 
 # vulkan
 #export RADV_PERFTEST=video_decode
+
+# flatpak
+#export PATH=/var/lib/flatpak/exports/share/applications/${PATH:+:${PATH}}
 
 # bemoji
 export BEMOJI_PICKER_CMD="tofi -c ''"

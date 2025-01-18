@@ -8,9 +8,11 @@ return require('packer').startup(function(use)
 	  -- or                          , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'tanvirtin/monokai.nvim'
+  --use 'tanvirtin/monokai.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use 'mbbill/undotree'
+  use 'ThePrimeagen/vim-be-good'
   use 'tpope/vim-fugitive'
   use {
       'VonHeikemen/lsp-zero.nvim',
